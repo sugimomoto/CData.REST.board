@@ -1,0 +1,114 @@
+<api:script xmlns:api="http://apiscript.com/ns?v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->
+  <api:info title="Projects" desc="Generated schema file." xmlns:other="http://apiscript.com/ns?v1">
+    <!-- You can modify the name, type, and column size here. -->
+    <attr name="AccountingTypeId"                    xs:type="integer"  readonly="true"              other:xPath="accounting_type_id"                  />
+    <attr name="AccountingTypeName"                  xs:type="string"   readonly="true"              other:xPath="accounting_type_name"                />
+    <attr name="AccountingType2Id"                   xs:type="integer"  readonly="true"              other:xPath="accounting_type2_id"                 />
+    <attr name="AccountingType2Name"                 xs:type="string"   readonly="true"              other:xPath="accounting_type2_name"               />
+    <attr name="AccountingType3Id"                   xs:type="integer"  readonly="true"              other:xPath="accounting_type3_id"                 />
+    <attr name="AccountingType3Name"                 xs:type="string"   readonly="true"              other:xPath="accounting_type3_name"               />
+    <attr name="ArchiveFlg"                          xs:type="integer"  readonly="true"              other:xPath="archive_flg"                         />
+    <attr name="Cc"                                  xs:type="string"   readonly="true"              other:xPath="cc"                                  />
+    <attr name="ClientId"                            xs:type="integer"  readonly="true"              other:xPath="client/id"                           />
+    <attr name="ClientName"                          xs:type="string"   readonly="true"              other:xPath="client/name"                         />
+    <attr name="ClientNameDisp"                      xs:type="string"   readonly="true"              other:xPath="client/name_disp"                    />
+    <attr name="ClientBranchId"                      xs:type="integer"  readonly="true"              other:xPath="client_branch/id"                    />
+    <attr name="ClientBranchName"                    xs:type="string"   readonly="true"              other:xPath="client_branch/name"                  />
+    <attr name="ClientNameDispKbn"                   xs:type="integer"  readonly="true"              other:xPath="client_name_disp_kbn"                />
+    <attr name="ClientNameDispKbnName"               xs:type="string"   readonly="true"              other:xPath="client_name_disp_kbn_name"           />
+    <attr name="ClientNameForPostDispKbn"            xs:type="integer"  readonly="true"              other:xPath="client_name_for_post_disp_kbn"       />
+    <attr name="ClientNameForPostDispKbnName"        xs:type="string"   readonly="true"              other:xPath="client_name_for_post_disp_kbn_name"  />
+    <attr name="CompanyBranchId"                     xs:type="integer"  readonly="true"              other:xPath="company_branch/id"                   />
+    <attr name="CompanyBranchName"                   xs:type="string"   readonly="true"              other:xPath="company_branch/name"                 />
+    <attr name="CompanyNameDispKbn"                  xs:type="integer"  readonly="true"              other:xPath="company_name_disp_kbn"               />
+    <attr name="CompanyNameDispKbnName"              xs:type="string"   readonly="true"              other:xPath="company_name_disp_kbn_name"          />
+    <attr name="CompanyNameForPostDispKbn"           xs:type="integer"  readonly="true"              other:xPath="company_name_for_post_disp_kbn"      />
+    <attr name="CompanyNameForPostDispKbnName"       xs:type="string"   readonly="true"              other:xPath="company_name_for_post_disp_kbn_name" />
+    <attr name="ContactFirstName"                    xs:type="string"   readonly="true"              other:xPath="contact/first_name"                  />
+    <attr name="ContactId"                           xs:type="integer"  readonly="true"              other:xPath="contact/id"                          />
+    <attr name="ContactLastName"                     xs:type="string"   readonly="true"              other:xPath="contact/last_name"                   />
+    <attr name="ContractEndDate"                     xs:type="string"   readonly="true"              other:xPath="contract_end_date"                   />
+    <attr name="ContractStartDate"                   xs:type="string"   readonly="true"              other:xPath="contract_start_date"                 />
+    <attr name="CostTax"                             xs:type="integer"  readonly="true"              other:xPath="cost_tax"                            />
+    <attr name="CostTotal"                           xs:type="integer"  readonly="true"              other:xPath="cost_total"                          />
+    <attr name="CreatedAt"                           xs:type="datetime" readonly="true"              other:xPath="created_at"                          />
+    <attr name="Currency"                            xs:type="string"   readonly="true"              other:xPath="currency"                            />
+    <attr name="DeliveryDate"                        xs:type="date"     readonly="true"              other:xPath="delivery_date"                       />
+    <attr name="DeliveryStatus"                      xs:type="integer"  readonly="true"              other:xPath="delivery_status"                     />
+    <attr name="DeliveryStatusName"                  xs:type="string"   readonly="true"              other:xPath="delivery_status_name"                />
+    <attr name="EstimateDate"                        xs:type="date"     readonly="true"              other:xPath="estimate_date"                       />
+    <attr name="ExchangeRate"                        xs:type="integer"  readonly="true"              other:xPath="exchange_rate"                       />
+    <attr name="GroupId"                             xs:type="integer"  readonly="true"              other:xPath="group_id"                            />
+    <attr name="GroupName"                           xs:type="string"   readonly="true"              other:xPath="group_name"                          />
+    <attr name="Id"                                  xs:type="integer"  readonly="true"              other:xPath="id"                                  />
+    <attr name="InHouseMemo"                         xs:type="string"   readonly="true"              other:xPath="in_house_memo"                       />
+    <attr name="InvoiceDates"                        xs:type="string"   readonly="true"              other:xPath="invoice_dates"                       />
+    <attr name="InvoiceTax"                          xs:type="integer"  readonly="true"              other:xPath="invoice_tax"                         />
+    <attr name="InvoiceTaxJpy"                       xs:type="integer"  readonly="true"              other:xPath="invoice_tax_jpy"                     />
+    <attr name="InvoiceTimingKbn"                    xs:type="integer"  readonly="true"              other:xPath="invoice_timing_kbn"                  />
+    <attr name="InvoiceTimingKbnName"                xs:type="string"   readonly="true"              other:xPath="invoice_timing_kbn_name"             />
+    <attr name="InvoiceTotal"                        xs:type="integer"  readonly="true"              other:xPath="invoice_total"                       />
+    <attr name="InvoiceTotalJpy"                     xs:type="integer"  readonly="true"              other:xPath="invoice_total_jpy"                   />
+    <attr name="LangKbn"                             xs:type="integer"  readonly="true"              other:xPath="lang_kbn"                            />
+    <attr name="LangKbnName"                         xs:type="string"   readonly="true"              other:xPath="lang_kbn_name"                       />
+    <attr name="LockFlg"                             xs:type="integer"  readonly="true"              other:xPath="lock_flg"                            />
+    <attr name="ManagementNo"                        xs:type="string"   readonly="true"              other:xPath="management_no"                       />
+    <attr name="Name"                                xs:type="string"   readonly="true"              other:xPath="name"                                />
+    <attr name="OrderStatus"                         xs:type="integer"  readonly="true"              other:xPath="order_status"                        />
+    <attr name="OrderStatusName"                     xs:type="string"   readonly="true"              other:xPath="order_status_name"                   />
+    <attr name="OrderedDate"                         xs:type="date"     readonly="true"              other:xPath="ordered_date"                        />
+    <attr name="PaymentMethodKbn"                    xs:type="integer"  readonly="true"              other:xPath="payment_method_kbn"                  />
+    <attr name="PaymentMethodKbnName"                xs:type="string"   readonly="true"              other:xPath="payment_method_kbn_name"             />
+    <attr name="PaymentTermId"                       xs:type="integer"  readonly="true"              other:xPath="payment_term_id"                     />
+    <attr name="PaymentTermName"                     xs:type="string"   readonly="true"              other:xPath="payment_term_name"                   />
+    <attr name="ProjectNo"                           xs:type="integer"  readonly="true"              other:xPath="project_no"                          />
+    <attr name="ProjectTypeId"                       xs:type="integer"  readonly="true"              other:xPath="project_type_id"                     />
+    <attr name="ProjectTypeName"                     xs:type="string"   readonly="true"              other:xPath="project_type_name"                   />
+    <attr name="ProjectType2Id"                      xs:type="integer"  readonly="true"              other:xPath="project_type2_id"                    />
+    <attr name="ProjectType2Name"                    xs:type="string"   readonly="true"              other:xPath="project_type2_name"                  />
+    <attr name="ProjectType3Id"                      xs:type="integer"  readonly="true"              other:xPath="project_type3_id"                    />
+    <attr name="ProjectType3Name"                    xs:type="string"   readonly="true"              other:xPath="project_type3_name"                  />
+    <attr name="ReducedTaxRateKbn"                   xs:type="integer"  readonly="true"              other:xPath="reduced_tax_rate_kbn"                />
+    <attr name="Tags"                                xs:type="string"   readonly="true"              other:xPath="tags"                                />
+    <attr name="Tax"                                 xs:type="integer"  readonly="true"              other:xPath="tax"                                 />
+    <attr name="TaxJpy"                              xs:type="integer"  readonly="true"              other:xPath="tax_jpy"                             />
+    <attr name="TaxRuleKbn"                          xs:type="integer"  readonly="true"              other:xPath="tax_rule_kbn"                        />
+    <attr name="TaxRuleKbnName"                      xs:type="string"   readonly="true"              other:xPath="tax_rule_kbn_name"                   />
+    <attr name="To"                                  xs:type="string"   readonly="true"              other:xPath="to"                                  />
+    <attr name="Total"                               xs:type="integer"  readonly="true"              other:xPath="total"                               />
+    <attr name="TotalJpy"                            xs:type="integer"  readonly="true"              other:xPath="total_jpy"                           />
+    <attr name="UpdatedAt"                           xs:type="datetime" readonly="true"              other:xPath="updated_at"                          />
+    <attr name="UserFirstName"                       xs:type="string"   readonly="true"              other:xPath="user/first_name"                     />
+    <attr name="UserId"                              xs:type="integer"  readonly="true"              other:xPath="user/id"                             />
+    <attr name="UserLastName"                        xs:type="string"   readonly="true"              other:xPath="user/last_name"                      />
+    <attr name="WarekiFlg"                           xs:type="integer"  readonly="true"              other:xPath="wareki_flg"                          />
+  </api:info>
+
+  <api:set attr="DataModel" value="DOCUMENT" />
+  <api:set attr="ResourceName" value="projects"/>
+
+  <api:set attr="Page" value="[rows@next | def('1')]" />
+  <api:set attr="PerPage" value="100"/>
+
+  <api:set attr="Header:Name#1" value="Authorization"/>
+  <api:set attr="Header:Value#1" value="Bearer [_connection.APIToken]"/>    
+  <api:set attr="Header:Name#2" value="X-Api-Key"/>
+  <api:set attr="Header:Value#2" value="[_connection.APIKey]"/>    
+  <api:set attr="EnablePaging"  value="true" />
+
+  <api:set attr="Parameters" value="page=[Page]&per_page=[PerPage]"/>
+  <api:set attr="URI" value="https://api.the-board.jp/v1/[ResourceName]?[Parameters]" />
+
+  <api:set attr="JSONPath" value="/" />
+
+  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->
+  <api:script method="GET">
+    <api:call op="jsonproviderGet">
+      <api:set attr="rows@next" value="[Page | add(1)]" />
+      <api:push/>
+    </api:call>
+  </api:script>
+
+</api:script>

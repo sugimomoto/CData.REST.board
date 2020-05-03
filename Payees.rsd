@@ -1,0 +1,67 @@
+<api:script xmlns:api="http://apiscript.com/ns?v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->
+  <api:info title="Payees" desc="Generated schema file." xmlns:other="http://apiscript.com/ns?v1">
+    <!-- You can modify the name, type, and column size here. -->
+    <attr name="AccountingCode"            xs:type="string"   readonly="true"              other:xPath="accounting_code"           />
+    <attr name="AddressEn"                 xs:type="string"   readonly="true"              other:xPath="address_en"                />
+    <attr name="Address1"                  xs:type="string"   readonly="true"              other:xPath="address1"                  />
+    <attr name="Address2"                  xs:type="string"   readonly="true"              other:xPath="address2"                  />
+    <attr name="ArchiveFlg"                xs:type="integer"  readonly="true"              other:xPath="archive_flg"               />
+    <attr name="BankChargeToClientFlg"     xs:type="integer"  readonly="true"              other:xPath="bank_charge_to_client_flg" />
+    <attr name="BasicAgreementFlg"         xs:type="integer"  readonly="true"              other:xPath="basic_agreement_flg"       />
+    <attr name="Cc"                        xs:type="string"   readonly="true"              other:xPath="cc"                        />
+    <attr name="CompanyNumber"             xs:type="string"   readonly="true"              other:xPath="company_number"            />
+    <attr name="CreatedAt"                 xs:type="datetime" readonly="true"              other:xPath="created_at"                />
+    <attr name="Currency"                  xs:type="string"   readonly="true"              other:xPath="currency"                  />
+    <attr name="CustomNo"                  xs:type="string"   readonly="true"              other:xPath="custom_no"                 />
+    <attr name="DocumentSendType"          xs:type="integer"  readonly="true"              other:xPath="document_send_type"        />
+    <attr name="DocumentSendTypeName"      xs:type="string"   readonly="true"              other:xPath="document_send_type_name"   />
+    <attr name="Fax"                       xs:type="string"   readonly="true"              other:xPath="fax"                       />
+    <attr name="Id"                        xs:type="integer"  readonly="true"              other:xPath="id"                        />
+    <attr name="LangKbn"                   xs:type="integer"  readonly="true"              other:xPath="lang_kbn"                  />
+    <attr name="LangKbnName"               xs:type="string"   readonly="true"              other:xPath="lang_kbn_name"             />
+    <attr name="Name"                      xs:type="string"   readonly="true"              other:xPath="name"                      />
+    <attr name="NameDisp"                  xs:type="string"   readonly="true"              other:xPath="name_disp"                 />
+    <attr name="NameEn"                    xs:type="string"   readonly="true"              other:xPath="name_en"                   />
+    <attr name="NdaFlg"                    xs:type="integer"  readonly="true"              other:xPath="nda_flg"                   />
+    <attr name="Note"                      xs:type="string"   readonly="true"              other:xPath="note"                      />
+    <attr name="PaymentTermId"             xs:type="integer"  readonly="true"              other:xPath="payment_term_id"           />
+    <attr name="PaymentTermName"           xs:type="string"   readonly="true"              other:xPath="payment_term_name"         />
+    <attr name="PhoneCountryCode"          xs:type="string"   readonly="true"              other:xPath="phone_country_code"        />
+    <attr name="Pref"                      xs:type="string"   readonly="true"              other:xPath="pref"                      />
+    <attr name="Tags"                      xs:type="string"   readonly="true"              other:xPath="tags"                      />
+    <attr name="Tel"                       xs:type="string"   readonly="true"              other:xPath="tel"                       />
+    <attr name="Title"                     xs:type="string"   readonly="true"              other:xPath="title"                     />
+    <attr name="To"                        xs:type="string"   readonly="true"              other:xPath="to"                        />
+    <attr name="UpdatedAt"                 xs:type="datetime" readonly="true"              other:xPath="updated_at"                />
+    <attr name="WarekiFlg"                 xs:type="integer"  readonly="true"              other:xPath="wareki_flg"                />
+    <attr name="Zip"                       xs:type="string"   readonly="true"              other:xPath="zip"                       />
+  </api:info>
+
+  <api:set attr="DataModel" value="DOCUMENT" />
+  <api:set attr="ResourceName" value="payees"/>
+
+  <api:set attr="Page" value="[rows@next | def('1')]" />
+  <api:set attr="PerPage" value="100"/>
+
+  <api:set attr="Header:Name#1" value="Authorization"/>
+  <api:set attr="Header:Value#1" value="Bearer [_connection.APIToken]"/>    
+  <api:set attr="Header:Name#2" value="X-Api-Key"/>
+  <api:set attr="Header:Value#2" value="[_connection.APIKey]"/>    
+  <api:set attr="EnablePaging"  value="true" />
+
+  <api:set attr="Parameters" value="page=[Page]&per_page=[PerPage]"/>
+  <api:set attr="URI" value="https://api.the-board.jp/v1/[ResourceName]?[Parameters]" />
+
+  <api:set attr="JSONPath" value="/" />
+
+  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->
+  <api:script method="GET">
+    <api:call op="jsonproviderGet">
+      <api:set attr="rows@next" value="[Page | add(1)]" />
+      <api:push/>
+    </api:call>
+  </api:script>
+
+</api:script>

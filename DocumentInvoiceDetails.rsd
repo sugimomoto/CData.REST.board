@@ -1,0 +1,47 @@
+<api:script xmlns:api="http://apiscript.com/ns?v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->
+  <api:info title="DocumentDeriveryDetails" desc="Generated schema file." xmlns:other="http://apiscript.com/ns?v1">
+    <!-- You can modify the name, type, and column size here. -->
+    <attr name="invoiceId"                       xs:type="integer"  readonly="false"              other:xPath="/json/invoice/id"                               />
+    <attr name="No"                                xs:type="integer"  readonly="false"              other:xPath="/json/invoice/details/no"                       />
+    <attr name="Description"                       xs:type="string"   readonly="false"              other:xPath="/json/invoice/details/description"              />
+    <attr name="DocumentDetailKbn"               xs:type="integer"  readonly="false"              other:xPath="/json/invoice/details/document_detail_kbn"      />
+    <attr name="DocumentDetailKbnName"          xs:type="string"   readonly="false"              other:xPath="/json/invoice/details/document_detail_kbn_name" />
+    <attr name="Quantity"                          xs:type="string"   readonly="false"              other:xPath="/json/invoice/details/quantity"                 />
+    <attr name="ReducedTaxRateKbn"              xs:type="integer"  readonly="false"              other:xPath="/json/invoice/details/reduced_tax_rate_kbn"     />
+    <attr name="SectionDescription"               xs:type="string"  readonly="false"              other:xPath="/json/invoice/details/section_description"      />
+    <attr name="SectionSubtotal"                  xs:type="integer"  readonly="false"              other:xPath="/json/invoice/details/section_subtotal"         />
+    <attr name="TaxIncludedFlg"                  xs:type="integer"  readonly="false"              other:xPath="/json/invoice/details/tax_included_flg"         />
+    <attr name="TaxRate"                          xs:type="string"   readonly="false"              other:xPath="/json/invoice/details/tax_rate"                 />
+    <attr name="TaxWithholdingFlg"               xs:type="integer"  readonly="false"              other:xPath="/json/invoice/details/tax_withholding_flg"      />
+    <attr name="Unit"                              xs:type="integer"  readonly="false"              other:xPath="/json/invoice/details/unit"                     />
+    <attr name="UnitPrice"                        xs:type="string"   readonly="false"              other:xPath="/json/invoice/details/unit_price"               />
+  </api:info>
+
+  <api:set attr="DataModel" value="FLATTENEDDOCUMENTS" />
+  <api:set attr="ResourceName" value="projects"/>
+
+  <api:set attr="Page" value="[rows@next | def('1')]" />
+  <api:set attr="PerPage" value="100"/>
+
+  <api:set attr="Header:Name#1" value="Authorization"/>
+  <api:set attr="Header:Value#1" value="Bearer [_connection.APIToken]"/>    
+  <api:set attr="Header:Name#2" value="X-Api-Key"/>
+  <api:set attr="Header:Value#2" value="[_connection.APIKey]"/>    
+  <api:set attr="EnablePaging"  value="true" />
+
+  <api:set attr="Parameters" value="response_group=invoice&page=[Page]&per_page=[PerPage]"/>
+  <api:set attr="URI" value="https://api.the-board.jp/v1/[ResourceName]?[Parameters]" />
+
+  <api:set attr="JSONPath" value="$.;$.invoice.details" />
+
+  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->
+  <api:script method="GET">
+    <api:call op="jsonproviderGet">
+      <api:set attr="rows@next" value="[Page | add(1)]" />
+      <api:push/>
+    </api:call>
+  </api:script>
+
+</api:script>

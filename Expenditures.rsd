@@ -1,0 +1,109 @@
+<api:script xmlns:api="http://apiscript.com/ns?v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->
+  <api:info title="Expenditures" desc="Generated schema file." xmlns:other="http://apiscript.com/ns?v1">
+    <!-- You can modify the name, type, and column size here. -->
+    <attr name="AccountingTypeId"                    xs:type="integer"  readonly="true"              other:xPath="accounting_type_id"                  />
+    <attr name="AccountingTypeName"                  xs:type="string"   readonly="true"              other:xPath="accounting_type_name"                />
+    <attr name="AccountingType2Id"                   xs:type="integer"  readonly="true"              other:xPath="accounting_type2_id"                 />
+    <attr name="AccountingType2Name"                 xs:type="string"   readonly="true"              other:xPath="accounting_type2_name"               />
+    <attr name="AccountingType3Id"                   xs:type="integer"  readonly="true"              other:xPath="accounting_type3_id"                 />
+    <attr name="AccountingType3Name"                 xs:type="string"   readonly="true"              other:xPath="accounting_type3_name"               />
+    <attr name="ArchiveFlg"                          xs:type="integer"  readonly="true"              other:xPath="archive_flg"                         />
+    <attr name="Cc"                                  xs:type="string"   readonly="true"              other:xPath="cc"                                  />
+    <attr name="CompanyBranchId"                     xs:type="integer"  readonly="true"              other:xPath="company_branch/id"                   />
+    <attr name="CompanyBranchName"                   xs:type="string"   readonly="true"              other:xPath="company_branch/name"                 />
+    <attr name="CompanyNameDispKbn"                  xs:type="integer"  readonly="true"              other:xPath="company_name_disp_kbn"               />
+    <attr name="CompanyNameDispKbnName"              xs:type="string"   readonly="true"              other:xPath="company_name_disp_kbn_name"          />
+    <attr name="CompanyNameForPostDispKbn"           xs:type="integer"  readonly="true"              other:xPath="company_name_for_post_disp_kbn"      />
+    <attr name="CompanyNameForPostDispKbnName"       xs:type="string"   readonly="true"              other:xPath="company_name_for_post_disp_kbn_name" />
+    <attr name="ContractEndDate"                     xs:type="string"   readonly="true"              other:xPath="contract_end_date"                   />
+    <attr name="ContractStartDate"                   xs:type="string"   readonly="true"              other:xPath="contract_start_date"                 />
+    <attr name="CreatedAt"                           xs:type="datetime" readonly="true"              other:xPath="created_at"                          />
+    <attr name="Currency"                            xs:type="string"   readonly="true"              other:xPath="currency"                            />
+    <attr name="DeliveryStatus"                      xs:type="integer"  readonly="true"              other:xPath="delivery_status"                     />
+    <attr name="DeliveryStatusName"                  xs:type="string"   readonly="true"              other:xPath="delivery_status_name"                />
+    <attr name="ExchangeRate"                        xs:type="integer"  readonly="true"              other:xPath="exchange_rate"                       />
+    <attr name="ExpenditureNo"                       xs:type="integer"  readonly="true"              other:xPath="expenditure_no"                      />
+    <attr name="ExpenditureStatus"                   xs:type="integer"  readonly="true"              other:xPath="expenditure_status"                  />
+    <attr name="ExpenditureStatusName"               xs:type="string"   readonly="true"              other:xPath="expenditure_status_name"             />
+    <attr name="ExpenditureTypeId"                   xs:type="string"   readonly="true"              other:xPath="expenditure_type_id"                 />
+    <attr name="ExpenditureTypeName"                 xs:type="string"   readonly="true"              other:xPath="expenditure_type_name"               />
+    <attr name="ExpenditureType2Id"                  xs:type="string"   readonly="true"              other:xPath="expenditure_type2_id"                />
+    <attr name="ExpenditureType2Name"                xs:type="string"   readonly="true"              other:xPath="expenditure_type2_name"              />
+    <attr name="ExpenditureType3Id"                  xs:type="string"   readonly="true"              other:xPath="expenditure_type3_id"                />
+    <attr name="ExpenditureType3Name"                xs:type="string"   readonly="true"              other:xPath="expenditure_type3_name"              />
+    <attr name="GroupId"                             xs:type="integer"  readonly="true"              other:xPath="group_id"                            />
+    <attr name="GroupName"                           xs:type="string"   readonly="true"              other:xPath="group_name"                          />
+    <attr name="Id"                                  xs:type="integer"  readonly="true"              other:xPath="id"                                  />
+    <attr name="InHouseMemo"                         xs:type="string"   readonly="true"              other:xPath="in_house_memo"                       />
+    <attr name="InvoiceDates"                        xs:type="string"   readonly="true"              other:xPath="invoice_dates"                       />
+    <attr name="LangKbn"                             xs:type="integer"  readonly="true"              other:xPath="lang_kbn"                            />
+    <attr name="LangKbnName"                         xs:type="string"   readonly="true"              other:xPath="lang_kbn_name"                       />
+    <attr name="LockFlg"                             xs:type="integer"  readonly="true"              other:xPath="lock_flg"                            />
+    <attr name="ManagementNo"                        xs:type="string"   readonly="true"              other:xPath="management_no"                       />
+    <attr name="Name"                                xs:type="string"   readonly="true"              other:xPath="name"                                />
+    <attr name="PayeeId"                             xs:type="integer"  readonly="true"              other:xPath="payee/id"                            />
+    <attr name="PayeeName"                           xs:type="string"   readonly="true"              other:xPath="payee/name"                          />
+    <attr name="PayeeNameDisp"                       xs:type="string"   readonly="true"              other:xPath="payee/name_disp"                     />
+    <attr name="PayeeBranchId"                       xs:type="integer"  readonly="true"              other:xPath="payee_branch/id"                     />
+    <attr name="PayeeBranchName"                     xs:type="string"   readonly="true"              other:xPath="payee_branch/name"                   />
+    <attr name="PayeeContactFirstName"               xs:type="string"   readonly="true"              other:xPath="payee_contact/first_name"            />
+    <attr name="PayeeContactId"                      xs:type="integer"  readonly="true"              other:xPath="payee_contact/id"                    />
+    <attr name="PayeeContactLastName"                xs:type="string"   readonly="true"              other:xPath="payee_contact/last_name"             />
+    <attr name="PayeeNameDispKbn"                    xs:type="integer"  readonly="true"              other:xPath="payee_name_disp_kbn"                 />
+    <attr name="PayeeNameDispKbnName"                xs:type="string"   readonly="true"              other:xPath="payee_name_disp_kbn_name"            />
+    <attr name="PayeeNameForPostDispKbn"             xs:type="integer"  readonly="true"              other:xPath="payee_name_for_post_disp_kbn"        />
+    <attr name="PayeeNameForPostDispKbnName"         xs:type="string"   readonly="true"              other:xPath="payee_name_for_post_disp_kbn_name"   />
+    <attr name="PaymentTermId"                       xs:type="integer"  readonly="true"              other:xPath="payment_term_id"                     />
+    <attr name="PaymentTermName"                     xs:type="string"   readonly="true"              other:xPath="payment_term_name"                   />
+    <attr name="PaymentTimingKbn"                    xs:type="integer"  readonly="true"              other:xPath="payment_timing_kbn"                  />
+    <attr name="PaymentTimingKbnName"                xs:type="string"   readonly="true"              other:xPath="payment_timing_kbn_name"             />
+    <attr name="ProjectId"                           xs:type="integer"  readonly="true"              other:xPath="project/id"                          />
+    <attr name="ProjectName"                         xs:type="string"   readonly="true"              other:xPath="project/name"                        />
+    <attr name="ProjectProjectNo"                    xs:type="integer"  readonly="true"              other:xPath="project/project_no"                  />
+    <attr name="ReducedTaxRateKbn"                   xs:type="integer"  readonly="true"              other:xPath="reduced_tax_rate_kbn"                />
+    <attr name="Tags"                                xs:type="string"   readonly="true"              other:xPath="tags"                                />
+    <attr name="Tax"                                 xs:type="integer"  readonly="true"              other:xPath="tax"                                 />
+    <attr name="TaxJpy"                              xs:type="integer"  readonly="true"              other:xPath="tax_jpy"                             />
+    <attr name="TaxRuleKbn"                          xs:type="integer"  readonly="true"              other:xPath="tax_rule_kbn"                        />
+    <attr name="TaxRuleKbnName"                      xs:type="string"   readonly="true"              other:xPath="tax_rule_kbn_name"                   />
+    <attr name="TaxWithholding"                      xs:type="integer"  readonly="true"              other:xPath="tax_withholding"                     />
+    <attr name="TaxWithholdingKbn"                   xs:type="integer"  readonly="true"              other:xPath="tax_withholding_kbn"                 />
+    <attr name="TaxWithholdingKbnName"               xs:type="string"   readonly="true"              other:xPath="tax_withholding_kbn_name"            />
+    <attr name="To"                                  xs:type="string"   readonly="true"              other:xPath="to"                                  />
+    <attr name="Total"                               xs:type="integer"  readonly="true"              other:xPath="total"                               />
+    <attr name="TotalJpy"                            xs:type="integer"  readonly="true"              other:xPath="total_jpy"                           />
+    <attr name="UpdatedAt"                           xs:type="datetime" readonly="true"              other:xPath="updated_at"                          />
+    <attr name="UserFirstName"                       xs:type="string"   readonly="true"              other:xPath="user/first_name"                     />
+    <attr name="UserId"                              xs:type="integer"  readonly="true"              other:xPath="user/id"                             />
+    <attr name="UserLastName"                        xs:type="string"   readonly="true"              other:xPath="user/last_name"                      />
+    <attr name="WarekiFlg"                           xs:type="integer"  readonly="true"              other:xPath="wareki_flg"                          />
+  </api:info>
+
+  <api:set attr="DataModel" value="DOCUMENT" />
+  <api:set attr="ResourceName" value="expenditures"/>
+
+  <api:set attr="Page" value="[rows@next | def('1')]" />
+  <api:set attr="PerPage" value="100"/>
+
+  <api:set attr="Header:Name#1" value="Authorization"/>
+  <api:set attr="Header:Value#1" value="Bearer [_connection.APIToken]"/>    
+  <api:set attr="Header:Name#2" value="X-Api-Key"/>
+  <api:set attr="Header:Value#2" value="[_connection.APIKey]"/>    
+  <api:set attr="EnablePaging"  value="true" />
+
+  <api:set attr="Parameters" value="page=[Page]&per_page=[PerPage]"/>
+  <api:set attr="URI" value="https://api.the-board.jp/v1/[ResourceName]?[Parameters]" />
+
+  <api:set attr="JSONPath" value="/" />
+
+  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->
+  <api:script method="GET">
+    <api:call op="jsonproviderGet">
+      <api:set attr="rows@next" value="[Page | add(1)]" />
+      <api:push/>
+    </api:call>
+  </api:script>
+
+</api:script>
