@@ -3,22 +3,22 @@
   <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->
   <api:info title="DocumentInvoices" desc="Generated schema file." xmlns:other="http://apiscript.com/ns?v1">
     <!-- You can modify the name, type, and column size here. -->
-    <attr name="BlankDateFlg"             xs:type="integer"  readonly="true"              other:xPath="/json/invoice/blank_date_flg"           />
-    <attr name="CreatedAt"                xs:type="datetime" readonly="true"              other:xPath="/json/invoice/created_at"               />
-    <attr name="Details"                  xs:type="string"   readonly="true"              other:xPath="/json/invoice/details"                  />
-    <attr name="DocumentAmountDispKbn"    xs:type="integer"  readonly="true"              other:xPath="/json/invoice/document_amount_disp_kbn" />
-    <attr name="Id"                       xs:type="integer"  readonly="true"              other:xPath="/json/invoice/id"                       />
-    <attr name="LockFlg"                  xs:type="integer"  readonly="true"              other:xPath="/json/invoice/lock_flg"                 />
-    <attr name="Message"                  xs:type="string"   readonly="true"              other:xPath="/json/invoice/message"                  />
-    <attr name="SealApprovalStatus"       xs:type="integer"  readonly="true"              other:xPath="/json/invoice/seal_approval_status"     />
-    <attr name="Tax"                      xs:type="integer"  readonly="true"              other:xPath="/json/invoice/tax"                      />
-    <attr name="TaxWithholding"           xs:type="integer"  readonly="true"              other:xPath="/json/invoice/tax_withholding"          />
-    <attr name="Total"                    xs:type="integer"  readonly="true"              other:xPath="/json/invoice/total"                    />
-    <attr name="UpdatedAt"                xs:type="datetime" readonly="true"              other:xPath="/json/invoice/updated_at"               />
-    <attr name="ValidPeriod"              xs:type="string"   readonly="true"              other:xPath="/json/invoice/valid_period"             />
+    <attr name="BlankDateFlg"             xs:type="integer"  readonly="true"              other:xPath="/json/invoices/blank_date_flg"           />
+    <attr name="CreatedAt"                xs:type="datetime" readonly="true"              other:xPath="/json/invoices/created_at"               />
+    <attr name="Details"                  xs:type="string"   readonly="true"              other:xPath="/json/invoices/details"                  />
+    <attr name="DocumentAmountDispKbn"    xs:type="integer"  readonly="true"              other:xPath="/json/invoices/document_amount_disp_kbn" />
+    <attr name="Id"                       xs:type="integer"  readonly="true"              other:xPath="/json/invoices/id"                       />
+    <attr name="LockFlg"                  xs:type="integer"  readonly="true"              other:xPath="/json/invoices/lock_flg"                 />
+    <attr name="Message"                  xs:type="string"   readonly="true"              other:xPath="/json/invoices/message"                  />
+    <attr name="SealApprovalStatus"       xs:type="integer"  readonly="true"              other:xPath="/json/invoices/seal_approval_status"     />
+    <attr name="Tax"                      xs:type="integer"  readonly="true"              other:xPath="/json/invoices/tax"                      />
+    <attr name="TaxWithholding"           xs:type="integer"  readonly="true"              other:xPath="/json/invoices/tax_withholding"          />
+    <attr name="Total"                    xs:type="integer"  readonly="true"              other:xPath="/json/invoices/total"                    />
+    <attr name="UpdatedAt"                xs:type="datetime" readonly="true"              other:xPath="/json/invoices/updated_at"               />
+    <attr name="ValidPeriod"              xs:type="string"   readonly="true"              other:xPath="/json/invoices/valid_period"             />
   </api:info>
 
-  <api:set attr="DataModel" value="DOCUMENT" />
+  <api:set attr="DataModel" value="FLATTENEDDOCUMENTS" />
   <api:set attr="ResourceName" value="projects"/>
 
   <api:set attr="Page" value="[rows@next | def('1')]" />
@@ -33,7 +33,7 @@
   <api:set attr="Parameters" value="response_group=invoice&page=[Page]&per_page=[PerPage]"/>
   <api:set attr="URI" value="https://api.the-board.jp/v1/[ResourceName]?[Parameters]" />
 
-  <api:set attr="JSONPath" value="/" />
+  <api:set attr="JSONPath" value="$.;$.invoices;" />
 
   <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->
   <api:script method="GET">
